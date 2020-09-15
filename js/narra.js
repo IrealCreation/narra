@@ -28,6 +28,12 @@ Narra.Story = class {
         this.display = createDOM("div", "narra-main");
         this.parent.append(this.display);
 
+        var color = (this.content.configuration["text-color"]  == null ? "black" : this.content.configuration["text-color"]);
+
+        this.display.css({
+            color:color
+        });
+
         //TODO: setup the basic configuration
         this.loadSequence(this.content.configuration.start);
     }
