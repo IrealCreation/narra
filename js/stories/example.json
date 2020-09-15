@@ -4,7 +4,7 @@
 	},
 
 	"sequence_0": {
-		"text": "This this the starting point of the story",
+		"text": "This this the starting point of the story.",
 		"choices": [
 			{
 				"text": "Tell me more!",
@@ -15,5 +15,29 @@
 				"destination": "sequence_2"
 			},
 		]
+	},
+	"sequence_1": {
+		"text": "With pleasure! Narra is a system designed for interactive stories, told through your web browser.",
+		"next": "sequence_3"
+	},
+	"sequence_2": {
+		"text": "Well, are you sure you don't want to learn more about this system?",
+		"choices": [
+			{
+				"text": "Yes, leave me alone!",
+				"destination": "sequence_4"
+			},
+			{
+				"text": "Fine, speak it out...",
+				"destination": "sequence_1"
+			},
+		]
+	},
+	"sequence_3": {
+		"text": "It takes the form of a javascript library, and the story its read are shared in JSON format."
+	},
+	"sequence_4": {
+		"text": "I sense some hardly contained anger within you... Communication could be of great help, you know.",
+		"next": "sequence_2"
 	}
 }
