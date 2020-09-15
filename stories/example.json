@@ -1,6 +1,6 @@
 {
 	"configuration": {
-		"start": "sequence_0",
+		"start": "sequence_0"
 	},
 
 	"sequence_0": {
@@ -13,7 +13,7 @@
 			{
 				"text": "Whatever",
 				"destination": "sequence_2"
-			},
+			}
 		]
 	},
 	"sequence_1": {
@@ -30,7 +30,7 @@
 			{
 				"text": "Fine, speak it out...",
 				"destination": "sequence_1"
-			},
+			}
 		]
 	},
 	"sequence_3": {
