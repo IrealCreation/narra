@@ -1,0 +1,4 @@
+DirectoryIndex index.php
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /narra/
