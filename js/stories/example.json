@@ -1,0 +1,19 @@
+{
+	"configuration": {
+		"start": "sequence_0",
+	},
+
+	"sequence_0": {
+		"text": "This this the starting point of the story",
+		"choices": [
+			{
+				"text": "Tell me more!",
+				"destination": "sequence_1"
+			},
+			{
+				"text": "Whatever",
+				"destination": "sequence_2"
+			},
+		]
+	}
+}
