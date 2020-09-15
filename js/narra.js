@@ -40,7 +40,7 @@ Narra.Story = class {
         console.log(sequence);
 
         var sequenceDOM = createDOM("div", "sequence");
-        var textDOM = createDOM("div", "text", sequence.text);
+        var textDOM = createDOM("p", "text", sequence.text);
         var choicesDOM = createDOM("ul", "choices");
         this.display.append(sequenceDOM);
         sequenceDOM.append(textDOM, choicesDOM);
@@ -49,7 +49,11 @@ Narra.Story = class {
             $.each(sequence.choices, function( key, choice ) {
                 var choiceDOM = createDOM("li", "choice", choice.text);
                 choicesDOM.append(choiceDOM);
+
                 choiceDOM.click(function() {
+                    choicesDOM.remove();
+                    var textChoice = createDOM("p", "text", choice.text);
+                    sequenceDOM.append(textChoice);
                     thisStory.loadSequence(choice.destination);
                 });
             });
