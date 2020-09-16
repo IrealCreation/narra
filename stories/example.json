@@ -1,6 +1,9 @@
 {
 	"configuration": {
-		"start": "sequence_0"
+		"start": "sequence_0",
+		"text-color": "white",
+		"background-color-bottom": "#222",
+		"background-color-top": "#888"
 	},
 
 	"sequence_0": {

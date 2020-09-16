@@ -29,9 +29,14 @@ Narra.Story = class {
         this.parent.append(this.display);
 
         var color = (this.content.configuration["text-color"]  == null ? "black" : this.content.configuration["text-color"]);
+        var backgroundTop = (this.content.configuration["background-color-top"]  == null ? "black" : this.content.configuration["background-color-top"]);
+        var backgroundBottom = (this.content.configuration["background-color-bottom"]  == null ? "black" : this.content.configuration["background-color-bottom"]);
+        var background = "-webkit-linear-gradient(90deg, " + backgroundBottom + " 0%, " + backgroundTop + " 100%)";
+        console.log("background : " + background);
 
         this.display.css({
-            color:color
+            "color":color,
+            "background":background
         });
 
         //TODO: setup the basic configuration
@@ -47,6 +52,7 @@ Narra.Story = class {
 
         var sequenceDOM = createDOM("div", "sequence");
         var textDOM = createDOM("p", "text", sequence.text);
+        this.makeItFloat(textDOM);
         var choicesDOM = createDOM("ul", "choices");
         this.display.append(sequenceDOM);
         sequenceDOM.append(textDOM, choicesDOM);
@@ -64,5 +70,11 @@ Narra.Story = class {
                 });
             });
         }
+    }
+
+    makeItFloat(DOM) {
+        var random = Math.ceil(Math.random() * 3);
+        var className = "floating" + random;
+        DOM.addClass(className);
     }
 }
