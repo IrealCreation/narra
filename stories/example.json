@@ -1,6 +1,7 @@
 {
 	"configuration": {
 		"start": "sequence_0",
+		"next-text": "Continuer...",
 		"text-color": "white",
 		"background-color-bottom": "#222",
 		"background-color-top": "#888"
@@ -14,7 +15,7 @@
 				"destination": "sequence_1"
 			},
 			{
-				"text": "Whatever",
+				"text": "Whatever.",
 				"destination": "sequence_2"
 			}
 		]
@@ -37,7 +38,7 @@
 		]
 	},
 	"sequence_3": {
-		"text": "It takes the form of a javascript library, and the story its read are shared in JSON format."
+		"text": "It takes the form of a javascript library, and the story it reads are written in JSON format."
 	},
 	"sequence_4": {
 		"text": "I sense some hardly contained anger within you... Communication could be of great help, you know.",
