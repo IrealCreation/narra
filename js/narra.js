@@ -22,16 +22,20 @@ Narra.Story = class {
     }
 
     start(data) {
+        var thisStory = this;
         this.content = data;
 
         this.display = createDOM("div", "narra-main");
         this.parent.append(this.display);
 
+        //Loading configuration
         this.configuration = {};
         this.configuration["next-text"] = (this.content.configuration["next-text"]  == null ? "Continue..." : this.content.configuration["next-text"]);
         this.configuration["text-color"] = (this.content.configuration["text-color"]  == null ? "black" : this.content.configuration["text-color"]);
         this.configuration["background-color-top"] = (this.content.configuration["background-color-top"]  == null ? "black" : this.content.configuration["background-color-top"]);
         this.configuration["background-color-bottom"] = (this.content.configuration["background-color-bottom"]  == null ? "black" : this.content.configuration["background-color-bottom"]);
+        this.configuration["background-image"] = this.content.configuration["background-image"];
+        this.configuration["background-image-animation-duration"] = (this.content.configuration["background-image-animation-duration"] == null ? 0 : this.content.configuration["background-image-animation-duration"]);
 
         var background = "-webkit-linear-gradient(90deg, " + this.configuration["background-color-bottom"] + " 0%, " + this.configuration["background-color-top"] + " 100%)";
 
@@ -40,7 +44,30 @@ Narra.Story = class {
             "background":background
         });
 
-        //TODO: setup the basic configuration
+        //Loading of the backgroundImage
+        if(this.configuration["background-image"] != null) {
+            var backgroundImage = new Image();
+            backgroundImage.onload = function() {
+                var width = backgroundImage.naturalWidth;
+                var height = backgroundImage.naturalHeight;
+                console.log("backgroundImage width: " + width + " ; height: " + height);
+
+                var backgroundImageDOM = createDOM("div", "background-image");
+                thisStory.display.append(backgroundImageDOM);
+
+                backgroundImageDOM.css({
+                    "background-image": "url(" + thisStory.configuration["background-image"] + ")",
+                    "width": width * 4,
+                    "height": height * 4,
+                    "animation-duration": thisStory.configuration["background-image-animation-duration"]
+                });
+            }
+            backgroundImage.onerror = function() { 
+                console.log("Background image not found at path " + thisStory.configuration["background-image"]);
+            }
+            backgroundImage.src = "img/smoke.png";
+        }
+
         this.loadSequence(this.content.configuration.start);
     }
 

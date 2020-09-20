@@ -11,6 +11,8 @@
  * *text-color*: the default color of the text, as used by the CSS property "color" (hexadecimal, rgb, rgba, or standard name). Default value is "black".
  * *background-color-top*: the default color of the top gradient background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default value is "white".
  * *background-color-bottom*: the default color of the bottom gradient background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default value is "white".
+ * *background-image*: the path to an image to use as a background, over the background-color.
+ * *background-image-animation-duration*: the duration of the background image animation loop (the larger the number, the slower the animation). "0" to disable animation. Default value is "0".
 
  ### Sequences
  Except from the configuration, stories are made up **sequences** of text that end by an interaction from the reader (either a choice or a simple input). A sequence is a JSON object, associated to a key that is used to identify it (ID). It accepts the following values:
@@ -27,3 +29,8 @@
  * *destination*: the ID of the sequence this choice leads to.
  * *font*: the font to use for the text, as used by the CSS property "font-family". Default to the value of the previous sequence. You can reset it back to the configuration value by using "reset".
  * *text-color*: the color of the text, as used by the CSS property "color" (hexadecimal, rgb, rgba, or standard name). Default to the value of the previous sequence. You can reset it back to the configuration value by using "reset".
+
+ ## The project
+
+ ### TODO list
+ * Make the background-image animation more customizable

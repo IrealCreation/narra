@@ -29,6 +29,7 @@ body {
 	width:100vw;
 	padding:0;
 	margin:0;
+	overflow: hidden;
 }
 .narra-main {
 	height:100%;
@@ -41,6 +42,8 @@ body {
 
 .sequence {
 	display:none;
+	position: relative;
+	z-index: 10;
 }
 .sequence:nth-last-child(2) {
 	opacity: 0.9;
@@ -126,4 +129,20 @@ p {
     80%  { transform: translate(2px, 9px); }
     83%  { transform: translate(2px, 9px); }
     to   { transform: translate(0px, -0px); }    
+}
+
+.background-image {
+    background-repeat: repeat;
+    position:absolute;
+    top: 0;
+    left: 0;
+    animation-name: bg-slide;
+    animation-duration: 0;
+    animation-timing-function: linear;
+    animation-delay: infinite;
+    z-index: 3;
+}
+@keyframes bg-slide {
+    from { transform: translate(0); }
+    to { transform: translate(-50%, -50%); }
 }
