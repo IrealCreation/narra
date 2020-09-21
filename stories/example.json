@@ -1,11 +1,14 @@
 {
 	"configuration": {
+		"title": "Demo",
+		"title-background-color": "black",
 		"start": "sequence_0",
 		"next-text": "Continuer...",
 		"text-color": "white",
 		"background-color-bottom": "#222",
 		"background-color-top": "#888",
 		"background-image": "img/smoke.png",
+		"background-image-opacity": "0.66",
 		"background-image-animation-duration": "40s"
 	},
 

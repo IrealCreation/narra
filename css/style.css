@@ -34,12 +34,31 @@ body {
 .narra-main {
 	height:100%;
 	width:100%;
-	padding:4%;
+	padding:0;
 	display:flex;
 	flex-direction:column;
 	justify-content:flex-end;
 }
 
+.title-card {
+	width: 100%;
+	height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    opacity: 0;
+	display: flex;
+	flex-direction:column;
+	justify-content:space-evenly;
+}
+h1, h2 {
+	text-align: center;
+}
+
+.sequences-container {
+	padding:4%;
+}
 .sequence {
 	display:none;
 	position: relative;
@@ -139,7 +158,7 @@ p {
     animation-name: bg-slide;
     animation-duration: 0;
     animation-timing-function: linear;
-    animation-delay: infinite;
+    animation-iteration-count: infinite;
     z-index: 3;
 }
 @keyframes bg-slide {

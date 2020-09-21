@@ -6,12 +6,18 @@
  ### Configuration
  Stories are JSON objects. They must include a **configuration** object containing the following values:
  * *start*: the ID of the starting sequence of the story. Required.
+ * *title*: the title of the story. If none, the title card is skipped.
+ * *subtitle*: the subtitle, displayed under the title on the title card.
+ * *title-background-color*: the default color of the title card background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default value is none.
+ * *title-fade-duration*: the duration of the title card fadeIn and fadeOut animations (in milliseconds). Default is 1000.
+ * *title-display-duration*: the duration the title card is in full display, in-between the fading animations (in milliseconds). Default is 3000.
  * *next-text*: the text displayed when the reader is prompted to continue to the next sequence. Default value is "Continue...".
  * *font*: the default font of the text, as used by the CSS property "font-family". Default value is "Times New Roman; serif".
  * *text-color*: the default color of the text, as used by the CSS property "color" (hexadecimal, rgb, rgba, or standard name). Default value is "black".
  * *background-color-top*: the default color of the top gradient background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default value is "white".
  * *background-color-bottom*: the default color of the bottom gradient background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default value is "white".
- * *background-image*: the path to an image to use as a background, over the background-color.
+ * *background-image*: the path to an image to use as a background, displayed over the background-color.
+ * *background-image-opacity*: the opacity of the background image. Default value is "1".
  * *background-image-animation-duration*: the duration of the background image animation loop (the larger the number, the slower the animation). "0" to disable animation. Default value is "0".
 
  ### Sequences
