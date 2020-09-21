@@ -1,6 +1,7 @@
 {
 	"configuration": {
 		"title": "Demo",
+		"subtitle": "An explanation of Narra, in Narra",
 		"title-background-color": "black",
 		"start": "sequence_0",
 		"next-text": "Continuer...",

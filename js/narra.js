@@ -71,6 +71,9 @@ Narra.Story = class {
         var titleTextDOM = createDOM("h1");
         titleTextDOM.html(this.configuration["title"]);
 
+        this.display.append(titleCardDOM);
+        titleCardDOM.append(titleTextDOM);
+
         if(this.configuration["subtitle"] != null) {
             var subtitleTextDOM = createDOM("h2");
             subtitleTextDOM.html(this.configuration["subtitle"]);
@@ -81,9 +84,6 @@ Narra.Story = class {
                 "background-color": this.configuration["title-background-color"]
             });
         }
-
-        this.display.append(titleCardDOM);
-        titleCardDOM.append(titleTextDOM);
 
         //We cannot use fadeIn because of the flex display
         titleCardDOM.animate({
