@@ -10,11 +10,13 @@
 		"background-color-top": "#888",
 		"background-image": "img/smoke.png",
 		"background-image-opacity": "0.66",
-		"background-image-animation-duration": "40s"
+		"background-image-animation-duration": "40s",
+		"sequence-animation-duration": "600"
 	},
 
 	"sequence_0": {
 		"text": "This this the starting point of the story.",
+		"animation-duration": "1000",
 		"choices": [
 			{
 				"text": "Tell me more!",

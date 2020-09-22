@@ -35,6 +35,7 @@ Narra.Story = class {
         this.configuration = {};
         this.configuration["start"] = this.content.configuration["start"];
         this.configuration["next-text"] = (this.content.configuration["next-text"]  == null ? "Continue..." : this.content.configuration["next-text"]);
+        this.configuration["font"] = (this.content.configuration["font"]  == null ? "Times New Roman, serif" : this.content.configuration["font"]);
         this.configuration["text-color"] = (this.content.configuration["text-color"]  == null ? "black" : this.content.configuration["text-color"]);
         this.configuration["background-color-top"] = (this.content.configuration["background-color-top"]  == null ? "black" : this.content.configuration["background-color-top"]);
         this.configuration["background-color-bottom"] = (this.content.configuration["background-color-bottom"]  == null ? "black" : this.content.configuration["background-color-bottom"]);
@@ -46,12 +47,20 @@ Narra.Story = class {
         this.configuration["title-background-color"] = this.content.configuration["title-background-color"];
         this.configuration["title-animation-duration"] = (this.content.configuration["title-animation-duration"] == null ? 1000 : this.content.configuration["title-animation-duration"]);
         this.configuration["title-display-duration"] = (this.content.configuration["title-display-duration"] == null ? 3000 : this.content.configuration["title-display-duration"]);
+        this.configuration["sequence-animation-duration"] = (this.content.configuration["sequence-animation-duration"] == null ? 300 : this.content.configuration["sequence-animation-duration"]);
 
-        var background = "-webkit-linear-gradient(90deg, " + this.configuration["background-color-bottom"] + " 0%, " + this.configuration["background-color-top"] + " 100%)";
+        this.setBackgroundColor(this.configuration["background-color-top"], this.configuration["background-color-bottom"]);
+
+        //Memory will be used for configuration that can be changed/reset on the fly in the sequences
+        this.memory = {};
+        this.memory["font"] = this.configuration["font"];
+        this.memory["text-color"] = this.configuration["text-color"];
+        this.memory["background-color-top"] = this.configuration["background-color-top"];
+        this.memory["background-color-bottom"] = this.configuration["background-color-bottom"];
 
         this.display.css({
-            "color":this.configuration["text-color"],
-            "background":background
+            "font": thisStory.memory["font"],
+            "color": thisStory.memory["text-color"],
         });
 
         if(this.configuration["title"] != null) {
@@ -133,6 +142,14 @@ Narra.Story = class {
         }
     }
 
+    setBackgroundColor(colorTop, colorBottom) {
+        var background = "-webkit-linear-gradient(90deg, " + colorBottom + " 0%, " + colorTop + " 100%)";
+
+        this.display.css({
+            "background":background
+        });
+    }
+
     loadSequence(name) {
         var thisStory = this;
         console.log("Displaying sequence " + name);
@@ -146,6 +163,28 @@ Narra.Story = class {
         this.sequencesContainer.append(sequenceDOM);
         sequenceDOM.append(textDOM);
 
+        var animationDuration = (sequence["animation-duration"] == null ? thisStory.configuration["sequence-animation-duration"] : sequence["animation-duration"]);
+        console.log(animationDuration);
+
+        //Update or reset the memory config
+        var memoryKeys = ["font", "text-color", "background-color-top", "background-color-bottom"];
+        memoryKeys.forEach(function(key) {
+            if(sequence[key] == "reset") {
+                thisStory.memory[key] = thisStory.configuration[key];
+            }
+            else if(sequence[key] != null) {
+                thisStory.memory[key] = sequence[key];
+            }
+        });
+
+        //Apply the memory config
+        sequenceDOM.css({
+            "font": thisStory.memory["font"],
+            "color": thisStory.memory["text-color"],
+        });
+        this.setBackgroundColor(thisStory.memory["background-color-top"], thisStory.memory["background-color-bottom"]);
+
+        //Display the choices...
         if(sequence.choices != null) {
             $.each(sequence.choices, function( key, choice ) {
                 var choiceDOM = createDOM("p", "choice", choice.text);
@@ -160,6 +199,7 @@ Narra.Story = class {
                 });
             });
         }
+        //... or display the prompt for next sequence
         else if(sequence.next) {
             var nextDOM = createDOM("p", "next", thisStory.configuration["next-text"]);
             thisStory.makeItFloat(nextDOM);
@@ -170,7 +210,7 @@ Narra.Story = class {
                 thisStory.loadSequence(sequence.next);
             });
         }
-        sequenceDOM.show(300);
+        sequenceDOM.show(parseInt(animationDuration));
     }
 
     makeItFloat(DOM) {
