@@ -14,18 +14,20 @@
 		"sequence-animation-duration": "600"
 	},
 
-	"start": {
-		"text": "La nuit avait étendu ses bras sur l'horizon de la ville.",
-		"animation-duration": "1200",
-		"choices": [
-			{
-				"text": "Tell me more!",
-				"destination": "sequence_1"
-			},
-			{
-				"text": "Whatever.",
-				"destination": "sequence_2"
-			}
-		]
+	"sequences": {
+		"start": {
+			"text": "La nuit avait étendu ses bras sur l'horizon de la ville.",
+			"animation-duration": "1200",
+			"choices": [
+				{
+					"text": "Tell me more!",
+					"destination": "sequence_1"
+				},
+				{
+					"text": "Whatever.",
+					"destination": "sequence_2"
+				}
+			]
+		}
 	}
 }

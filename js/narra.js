@@ -6,7 +6,7 @@ Narra.Story = class {
         var thisStory = this;
 
         this.parent = $("body");
-        this.content = null;
+        this.data = null;
         
         console.log("Trying to load " + path);
 
@@ -23,7 +23,8 @@ Narra.Story = class {
 
     start(data) {
         var thisStory = this;
-        this.content = data;
+        this.data = data;
+        this.sequences = this.data.sequences;
 
         this.display = createDOM("div", "narra-main");
         this.parent.append(this.display);
@@ -33,21 +34,21 @@ Narra.Story = class {
 
         //Loading configuration
         this.configuration = {};
-        this.configuration["start"] = this.content.configuration["start"];
-        this.configuration["next-text"] = (this.content.configuration["next-text"]  == null ? "Continue..." : this.content.configuration["next-text"]);
-        this.configuration["font"] = (this.content.configuration["font"]  == null ? "Times New Roman, serif" : this.content.configuration["font"]);
-        this.configuration["text-color"] = (this.content.configuration["text-color"]  == null ? "black" : this.content.configuration["text-color"]);
-        this.configuration["background-color-top"] = (this.content.configuration["background-color-top"]  == null ? "black" : this.content.configuration["background-color-top"]);
-        this.configuration["background-color-bottom"] = (this.content.configuration["background-color-bottom"]  == null ? "black" : this.content.configuration["background-color-bottom"]);
-        this.configuration["background-image"] = this.content.configuration["background-image"];
-        this.configuration["background-image-animation-duration"] = (this.content.configuration["background-image-animation-duration"] == null ? 0 : this.content.configuration["background-image-animation-duration"]);
-        this.configuration["background-image-opacity"] = (this.content.configuration["background-image-opacity"] == null ? 1 : this.content.configuration["background-image-opacity"]);
-        this.configuration["title"] = this.content.configuration["title"];
-        this.configuration["subtitle"] = this.content.configuration["subtitle"];
-        this.configuration["title-background-color"] = this.content.configuration["title-background-color"];
-        this.configuration["title-animation-duration"] = (this.content.configuration["title-animation-duration"] == null ? 1000 : this.content.configuration["title-animation-duration"]);
-        this.configuration["title-display-duration"] = (this.content.configuration["title-display-duration"] == null ? 3000 : this.content.configuration["title-display-duration"]);
-        this.configuration["sequence-animation-duration"] = (this.content.configuration["sequence-animation-duration"] == null ? 300 : this.content.configuration["sequence-animation-duration"]);
+        this.configuration["start"] = this.data.configuration["start"];
+        this.configuration["next-text"] = (this.data.configuration["next-text"]  == null ? "Continue..." : this.data.configuration["next-text"]);
+        this.configuration["font"] = (this.data.configuration["font"]  == null ? "Times New Roman, serif" : this.data.configuration["font"]);
+        this.configuration["text-color"] = (this.data.configuration["text-color"]  == null ? "black" : this.data.configuration["text-color"]);
+        this.configuration["background-color-top"] = (this.data.configuration["background-color-top"]  == null ? "black" : this.data.configuration["background-color-top"]);
+        this.configuration["background-color-bottom"] = (this.data.configuration["background-color-bottom"]  == null ? "black" : this.data.configuration["background-color-bottom"]);
+        this.configuration["background-image"] = this.data.configuration["background-image"];
+        this.configuration["background-image-animation-duration"] = (this.data.configuration["background-image-animation-duration"] == null ? 0 : this.data.configuration["background-image-animation-duration"]);
+        this.configuration["background-image-opacity"] = (this.data.configuration["background-image-opacity"] == null ? 1 : this.data.configuration["background-image-opacity"]);
+        this.configuration["title"] = this.data.configuration["title"];
+        this.configuration["subtitle"] = this.data.configuration["subtitle"];
+        this.configuration["title-background-color"] = this.data.configuration["title-background-color"];
+        this.configuration["title-animation-duration"] = (this.data.configuration["title-animation-duration"] == null ? 1000 : this.data.configuration["title-animation-duration"]);
+        this.configuration["title-display-duration"] = (this.data.configuration["title-display-duration"] == null ? 3000 : this.data.configuration["title-display-duration"]);
+        this.configuration["sequence-animation-duration"] = (this.data.configuration["sequence-animation-duration"] == null ? 300 : this.data.configuration["sequence-animation-duration"]);
 
         this.setBackgroundColor(this.configuration["background-color-top"], this.configuration["background-color-bottom"]);
 
@@ -154,7 +155,7 @@ Narra.Story = class {
         var thisStory = this;
         console.log("Displaying sequence " + name);
 
-        var sequence = this.content[name];
+        var sequence = this.sequences[name];
         console.log(sequence);
 
         var sequenceDOM = createDOM("div", "sequence");
