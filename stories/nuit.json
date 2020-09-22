@@ -1,0 +1,31 @@
+{
+	"configuration": {
+		"title": "Nuit",
+		"subtitle": "Une brève nouvelle interactive, par Richard Legrand",
+		"title-background-color": "black",
+		"start": "start",
+		"next-text": "Continuer...",
+		"text-color": "white",
+		"background-color-bottom": "#222",
+		"background-color-top": "#888",
+		"background-image": "img/smoke.png",
+		"background-image-opacity": "0.66",
+		"background-image-animation-duration": "40s",
+		"sequence-animation-duration": "600"
+	},
+
+	"start": {
+		"text": "La nuit avait étendu ses bras sur l'horizon de la ville.",
+		"animation-duration": "1200",
+		"choices": [
+			{
+				"text": "Tell me more!",
+				"destination": "sequence_1"
+			},
+			{
+				"text": "Whatever.",
+				"destination": "sequence_2"
+			}
+		]
+	}
+}
