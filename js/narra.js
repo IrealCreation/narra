@@ -165,7 +165,6 @@ Narra.Story = class {
         sequenceDOM.append(textDOM);
 
         var animationDuration = (sequence["animation-duration"] == null ? thisStory.configuration["sequence-animation-duration"] : sequence["animation-duration"]);
-        console.log(animationDuration);
 
         //Update or reset the memory config
         var memoryKeys = ["font", "text-color", "background-color-top", "background-color-bottom"];
