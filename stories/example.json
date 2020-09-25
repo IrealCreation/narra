@@ -39,7 +39,17 @@
 			"choices": [
 				{
 					"text": "Yes, leave me alone!",
-					"destination": "sequence_4"
+					"destination": "sequence_4",
+					"conditions": {
+						"angry": false
+					}
+				},
+				{
+					"text": "I said fuck off!",
+					"destination": "sequence_4",
+					"conditions": {
+						"angry": true
+					}
 				},
 				{
 					"text": "Fine, speak it out...",
@@ -52,7 +62,10 @@
 		},
 		"sequence_4": {
 			"text": "I sense some hardly contained anger within you... Communication could be of great help, you know.",
-			"next": "sequence_2"
+			"next": "sequence_2",
+			"variables": {
+				"angry": true
+			}
 		}
 	}
 }

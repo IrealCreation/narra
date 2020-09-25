@@ -59,6 +59,9 @@ Narra.Story = class {
         this.memory["background-color-top"] = this.configuration["background-color-top"];
         this.memory["background-color-bottom"] = this.configuration["background-color-bottom"];
 
+        //Variables can be used by the writer to unlock choices
+        this.variables = {};
+
         this.display.css({
             "font": thisStory.memory["font"],
             "color": thisStory.memory["text-color"],
@@ -184,9 +187,31 @@ Narra.Story = class {
         });
         this.setBackgroundColor(thisStory.memory["background-color-top"], thisStory.memory["background-color-bottom"]);
 
+        //Set the variables...
+        if(sequence.variables != null) {
+            $.each(sequence.variables, function( name, value ) {
+                thisStory.variables[name] = value;
+            });
+        }
+
         //Display the choices...
         if(sequence.choices != null) {
             $.each(sequence.choices, function( key, choice ) {
+
+                //Check if the conditions are met
+                if(choice.conditions != null) {
+                    var validate = false;
+                    $.each(choice.conditions, function( name, value ) {
+                        if(thisStory.variables[name] == value || (thisStory.variables[name] == null && value == false)) {
+                            validate = true;
+                        }
+                    });
+
+                    //If the condition isn't met, let's move to the next iteration
+                    if(!validate)
+                        return true;
+                }
+
                 var choiceDOM = createDOM("p", "choice", choice.text);
                 thisStory.makeItFloat(choiceDOM);
                 sequenceDOM.append(choiceDOM);

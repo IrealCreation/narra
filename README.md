@@ -31,6 +31,7 @@
  * *background-color-top*: the color of the top gradient background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default to the value of the previous sequence. You can reset it back to the configuration value by using "reset".
  * *background-color-bottom*: the color of the top gradient background, as used by the CSS property "background-color" (hexadecimal, rgb, rgba, or standard name). Default to the value of the previous sequence. You can reset it back to the configuration value by using "reset".
  * *animation-duration*: the time it takes for the sequence to appear (in milliseconds). Default is the configuration value.
+ * *variables*: an object containing the variable names (as keys) to modify (as values) when this sequence is reached. A variable is a boolean, with its name being a string, and a default value of false.
 
  ### Choices
  A **choice** represents a narrative branch offered to the reader at the end of a sequence, leading to another sequence. Please note that, semanticaly, we here use the word "choice" to designate a specific option available to pick, and not the range of the various options (as in "I made the choice to live" and not "We're confronted to a difficult choice"). It accepts the following values:
@@ -38,6 +39,7 @@
  * *destination*: the ID of the sequence this choice leads to.
  * *font*: the font to use for the text, as used by the CSS property "font-family". Default to the value of the previous sequence. You can reset it back to the configuration value by using "reset".
  * *text-color*: the color of the text, as used by the CSS property "color" (hexadecimal, rgb, rgba, or standard name). Default to the value of the previous sequence. You can reset it back to the configuration value by using "reset".
+ * *conditions*: an array of variable names which, if one of them is true, unlocks this choice; otherwise it will be hidden to the reader.
 
  ## The project
 
