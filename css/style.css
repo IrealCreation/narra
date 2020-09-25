@@ -122,24 +122,66 @@ p {
 }
 
 .floating1 {  
-    animation-name: floating;
+    animation-name: floatingA;
     animation-duration: 9s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 .floating2 {  
-    animation-name: floating;
-    animation-duration: 10s;
+    animation-name: floatingA;
+    animation-duration: 9.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
 .floating3 {  
-    animation-name: floating;
+    animation-name: floatingA;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating4 {  
+    animation-name: floatingA;
+    animation-duration: 10.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating5 {  
+    animation-name: floatingA;
     animation-duration: 11s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
-@keyframes floating {
+.floating6 {  
+    animation-name: floatingB;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating7 {  
+    animation-name: floatingB;
+    animation-duration: 9.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating8 {  
+    animation-name: floatingB;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating9 {  
+    animation-name: floatingB;
+    animation-duration: 10.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+.floating10 {  
+    animation-name: floatingB;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floatingA {
     from { transform: translate(0,  0px); }
     5%  { transform: translate(0, 0px); }
     15%  { transform: translate(1px, 4px); }
@@ -152,6 +194,22 @@ p {
     68%  { transform: translate(1px, 6px); }
     80%  { transform: translate(2px, 9px); }
     83%  { transform: translate(2px, 9px); }
+    to   { transform: translate(0px, -0px); }    
+}
+@keyframes floatingB {
+    from { transform: translate(0,  0px); }
+    4%  { transform: translate(0, 0px); }
+    14%  { transform: translate(0px, -2px); }
+    18%  { transform: translate(0px, -2px); }
+    32%  { transform: translate(1px, 3px); }
+    36%  { transform: translate(1px, 3px); }
+    47%  { transform: translate(1px, 1px); }
+    51%  { transform: translate(1px, 1px); }
+    65%  { transform: translate(2px, 9px); }
+    73%  { transform: translate(2px, 9px); }
+    82%  { transform: translate(1px, 4px); }
+    88%  { transform: translate(1px, 6px); }
+    91%  { transform: translate(1px, 6px); }
     to   { transform: translate(0px, -0px); }    
 }
 

@@ -239,7 +239,7 @@ Narra.Story = class {
     }
 
     makeItFloat(DOM) {
-        var random = Math.ceil(Math.random() * 3);
+        var random = Math.ceil(Math.random() * 10);
         var className = "floating" + random;
         DOM.addClass(className);
     }
