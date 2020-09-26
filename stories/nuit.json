@@ -20,14 +20,21 @@
 			"animation-duration": "1200",
 			"choices": [
 				{
-					"text": "Tell me more!",
-					"destination": "sequence_1"
+					"text": "Grandes avenues éclairées.",
+					"destination": "avenues"
 				},
 				{
-					"text": "Whatever.",
-					"destination": "sequence_2"
+					"text": "Allées bruissantes de vie.",
+					"destination": "allées"
+				}
+				{
+					"text": "Ruelles sombres.",
+					"destination": "ruelles"
 				}
 			]
+		},
+		"avenues": {
+			"text": "Les larges avenues étaient bordées de lumière."
 		}
 	}
 }
