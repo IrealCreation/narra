@@ -20,21 +20,30 @@
 			"animation-duration": "1200",
 			"choices": [
 				{
-					"text": "Grandes avenues éclairées.",
+					"text": "Grandes avenues baignées de lumière.",
 					"destination": "avenues"
 				},
 				{
-					"text": "Allées bruissantes de vie.",
-					"destination": "allées"
-				}
-				{
-					"text": "Ruelles sombres.",
+					"text": "Ruelles nimbées de pénombre.",
 					"destination": "ruelles"
 				}
 			]
 		},
 		"avenues": {
-			"text": "Les larges avenues étaient bordées de lumière."
+			"text": "Les larges avenues étaient bordées de lumière.",
+			"choices": [
+				{
+					"text": "Les lieux grouillants de vie.",
+					"destination": "avenues-social"
+				},
+				{
+					"text": "Monuments calmes",
+					"destination": "monuments"
+				}
+			]
+		},
+		"ruelles": {
+			"text": "Ici, un autre visage de la ville se dessinait en clair-obscur."
 		}
 	}
 }
