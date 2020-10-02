@@ -7,6 +7,7 @@ Narra.Story = class {
 
         this.parent = $("body");
         this.data = null;
+        this.lastFloat = 0; //The n° of the last float, to avoid consecutives identical sequences
         
         console.log("Trying to load " + path);
 
@@ -246,7 +247,12 @@ Narra.Story = class {
     }
 
     makeItFloat(DOM) {
-        var random = Math.ceil(Math.random() * 10);
+        var random = this.lastFloat;
+        while(random == this.lastFloat) {
+            random = Math.ceil(Math.random() * 10);
+        }
+        this.lastFloat = random;
+        
         var className = "floating" + random;
         DOM.addClass(className);
     }
