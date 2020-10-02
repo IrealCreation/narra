@@ -16,21 +16,24 @@
 
 	"sequences": {
 		"start": {
-			"text": "La nuit avait étendu ses bras sur l'horizon de la ville.",
+			"text": [
+				"La nuit avait étendu ses bras sur le monde. Pour chacun, son obscurité recellait une différente promesse suavement murmurée : celle de ténébreux mystères ; celle de douces tentations ; celle de périlleux dangers ; celle d'inavoués secrets... Son horizon de velours noir était brodé d'infinies possibilités, car en s'engouffrant entre les portes du soir, nul ne savait ce qu'il y rencontrerait.",
+				"C'est là que tu cheminais, sous le ciel nocturne et les lumières artificielles de la ville s'étendant autour de toi. Tes pas claquaient contre le sol de bitume, encore incertains du trajet qui serait le leur en cette nuit..."
+				],
 			"animation-duration": "1200",
 			"choices": [
 				{
-					"text": "Grandes avenues baignées de lumière.",
+					"text": "Vers les grandes avenues baignées de lumière.",
 					"destination": "avenues"
 				},
 				{
-					"text": "Ruelles nimbées de pénombre.",
+					"text": "Vers les modestes ruelles nimbées de pénombre.",
 					"destination": "ruelles"
 				}
 			]
 		},
 		"avenues": {
-			"text": "Les larges avenues étaient bordées de lumière.",
+			"text": "Tes pas te portent . Là, le coeur battant de la ville continue à frémir malgré l'heure tardive",
 			"choices": [
 				{
 					"text": "Les lieux grouillants de vie.",

@@ -95,7 +95,7 @@ h2 {
 }
 
 .choice {
-	margin-left:30px;
+    margin-left: 30px;
 	cursor: pointer;
 }
 .choice.selected {
@@ -103,14 +103,16 @@ h2 {
 }
 .next {
 	opacity: 0.6;
-	margin-left: 30px;
+    margin-left: 30px;
 	font-style: italic;
 	cursor: pointer;
 }
 
 p {
+    text-indent: 20px;
 	margin: 25px 0;
 	font-size: 20px;
+    line-height: 1.25;
 }
 
 .hide {

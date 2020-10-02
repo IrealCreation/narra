@@ -161,11 +161,18 @@ Narra.Story = class {
         var sequence = this.sequences[name];
         console.log(sequence);
 
+        //The text can be a string or an array: if it's a string, we put it into an array
+        if(!Array.isArray(sequence.text)) {
+            sequence.text = [sequence.text];
+        }
+
         var sequenceDOM = createDOM("div", "sequence");
-        var textDOM = createDOM("p", "text", sequence.text);
-        this.makeItFloat(textDOM);
-        this.sequencesContainer.append(sequenceDOM);
-        sequenceDOM.append(textDOM);
+        $.each(sequence.text, function( key, text ) {
+            var textDOM = createDOM("p", "text", text);
+            thisStory.makeItFloat(textDOM);
+            thisStory.sequencesContainer.append(sequenceDOM);
+            sequenceDOM.append(textDOM);
+        });
 
         var animationDuration = (sequence["animation-duration"] == null ? thisStory.configuration["sequence-animation-duration"] : sequence["animation-duration"]);
 
