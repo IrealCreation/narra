@@ -33,11 +33,11 @@
 			]
 		},
 		"avenues": {
-			"text": "Tes pas te portent juqu'aux larges arterres principales, emplies de lumière et de vie. Là, le coeur battant de la ville continue à frémir malgré l'heure tardive",
+			"text": "Tes pas te portent juqu'aux larges arterres principales, emplies de lumière et de vie. Là, le coeur battant de la ville continue à frémir malgré l'heure tardive. Dans ces beaux quartiers se cotoient la beauté sans âge des monuments historiques, et celle bourgeonnante qui se presse dans les lieux de rencontre à la mode... Gloire passée d'un côté, délices éphémères de l'autre.",
 			"choices": [
 				{
 					"text": "Les lieux grouillants de vie.",
-					"destination": "avenues-social"
+					"destination": "mondain"
 				},
 				{
 					"text": "Monuments calmes",
@@ -45,8 +45,48 @@
 				}
 			]
 		},
+		"mondain": {
+			"choices": [
+				{
+					"destination": "discotheque"
+				},
+				{
+					"destination": "palace"
+				}
+			]
+		},
+		"discotheque": {
+			"comment": "Hédoniste, vampire, sexe"
+		},
+		"palace": {
+			"comment": "Hédoniste, riche, vampire"
+		},
+		"monuments": {
+			"comment": "Riche, vampire, fantôme"
+		}
 		"ruelles": {
-			"text": "Ici, un autre visage de la ville se dessinait en clair-obscur."
+			"text": "Ici, un autre visage de la ville se dessinait en clair-obscur.",
+			"choices": [
+				{
+					"destination": "populace"
+				},
+				{
+					"destination": "solitude"
+				}
+			]
+		},
+		"populace": {
+			"choices": [
+				{
+					"destination": "discotheque"
+				},
+				{
+					"destination": "tripot"
+				}
+			]
+		},
+		"solitude": {
+			"comment": "Fugitif, meurtrier, fantôme"
 		}
 	}
 }
