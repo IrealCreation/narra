@@ -62,8 +62,22 @@
 			"comment": "Hédoniste, riche, vampire"
 		},
 		"monuments": {
-			"comment": "Riche, vampire, fantôme"
-		}
+			"text": "L'agitation habituelle de la ville laisse place à une ambiance feutrée où seuls tes pas résonnent entre les murs de pierre en cette heure avancée.",
+			"choices": [
+				{
+					"text": "Une ancienne église",
+					"destination": "eglise"
+				},
+				{
+					"text": "Musée / Museum ?"
+				},
+				{
+					"text": "Un hôtel particulier devenu restaurant de luxe",
+					"destination": "palace"
+				}
+			],
+			"comment": "Riche, vampire, fantôme, fugitif"
+		},
 		"ruelles": {
 			"text": "Ici, un autre visage de la ville se dessinait en clair-obscur.",
 			"choices": [
@@ -74,6 +88,9 @@
 					"destination": "solitude"
 				}
 			]
+		},
+		"eglise": {
+			"comment": "Meurtrier, fugitif, fantôme, vampire"
 		},
 		"populace": {
 			"choices": [
