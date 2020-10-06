@@ -86,6 +86,45 @@
 			],
 			"comment": "Hédoniste, révolution"
 		},
+		"cafe-vin": {
+			"text": "",
+			"choices": [
+				{
+					"text": "",
+					"destination": ""
+				},
+				{
+					"text": "",
+					"destination": ""
+				}
+			],
+		},
+		"cafe-debat": {
+			"text": "",
+			"choices": [
+				{
+					"text": "",
+					"destination": ""
+				},
+				{
+					"text": "",
+					"destination": ""
+				}
+			],
+		},
+		"cafe-piano": {
+			"text": "",
+			"choices": [
+				{
+					"text": "",
+					"destination": ""
+				},
+				{
+					"text": "",
+					"destination": ""
+				}
+			],
+		},
 		"palace": {
 			"comment": "Hédoniste, riche, vampire"
 		},
