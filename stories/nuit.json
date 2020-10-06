@@ -78,6 +78,9 @@
 			],
 			"comment": "Riche, vampire, fantôme, fugitif"
 		},
+		"eglise": {
+			"comment": "Meurtrier, fugitif, fantôme, vampire"
+		},
 		"ruelles": {
 			"text": "Ici, un autre visage de la ville se dessinait en clair-obscur.",
 			"choices": [
@@ -89,9 +92,6 @@
 				}
 			]
 		},
-		"eglise": {
-			"comment": "Meurtrier, fugitif, fantôme, vampire"
-		},
 		"populace": {
 			"choices": [
 				{
@@ -99,6 +99,9 @@
 				},
 				{
 					"destination": "tripot"
+				},
+				{
+					"destination": "groupe"
 				}
 			]
 		},
