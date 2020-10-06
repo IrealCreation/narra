@@ -33,46 +33,74 @@
 			]
 		},
 		"avenues": {
-			"text": "Tes pas te portent jusqu'aux larges arterres principales, emplies de lumière et de vie. Là, le coeur battant de la ville continue à frémir malgré l'heure tardive. Dans ces beaux quartiers se cotoient la beauté sans âge des monuments historiques, et celle bourgeonnante qui se presse dans les lieux de rencontre à la mode... Gloire passée d'un côté, délices éphémères de l'autre.",
+			"text": "Tes pas te portent jusqu'aux larges arterres principales, emplies de lumière et de vie. Là, le coeur battant de la ville continue à frémir malgré l'heure tardive. Dans ces beaux quartiers se cotoient la beauté sans âge des monuments historiques, et celle bourgeonnante qui se presse dans les lieux de rencontre à la mode... Gloires passées d'un côté, délices éphémères de l'autre.",
 			"choices": [
 				{
-					"text": "Les lieux grouillants de vie.",
+					"text": "Se mêler aux lieux grouillants de vie.",
 					"destination": "mondain"
 				},
 				{
-					"text": "Monuments calmes",
+					"text": "Se diriger vers les calmes monuments.",
 					"destination": "monuments"
 				}
 			]
 		},
 		"mondain": {
+			"text": "Les trottoires des rues les plus huppées sont éclairés d'enseignes chatoyantes, néons et LED clignotantes, portant sur la vie nocturne une lumière qui ne dort jamais. Sous cet éclat artificiel se presse une foule parée de ses atours les plus chatoyants ou les plus aguicheurs : robes en sequins, chemises entrouvertes, jambes de nylon, montres rutilantes... Une éternelle jeunesse désireuse de croquer les fruits de la nuit promis derrière des portes bien défendues.",
 			"choices": [
 				{
+					"text": "Se laisser guider par la foule et la musique jusqu'à une discothèque branchée.",
 					"destination": "discotheque"
 				},
 				{
+					"text": "Passer les battants d'un café animé.",
+					"destination": "cafe"
+				},
+				{
+					"text": "Préférer l'ambiance plus feutrée d'un palace très select.",
 					"destination": "palace"
 				}
 			]
 		},
 		"discotheque": {
-			"comment": "Hédoniste, vampire, sexe"
+			"comment": "Hédoniste, vampire, sexe, meurtrier"
+		},
+		"cafe": {
+			"text": [
+				"A peine as-tu pénétré dans le café que tu es assailli de bruit de centaines de voix, de rires, de conversations. Nombreux ici sont ceux attablés, soient-ils des bandes d'amis appréciant insouciemment ce moment partagé ensemble ; des couples cherchant à s'apprivoise l'un-l'autre ; ou des quidams occupés à refaire le monde autour d'un verre...",
+				"Un serveur fort occupé te guide, entre deux commandes, jusqu'à l'une des rares tables encore inoccupée de l'établissement, où tu t'assois sous un mur occupé par une élégante fresque en verre peint, près d'un groupe entretenant un débat animée. Tu remarques non loin un piano droit, fermé et innocupé, sans doute utilisé lors de soirées jam. Le serveur glisse un menu sur la table puis s'éloigne pour continuer sa besogne."
+			],
+			"choices": [
+				{
+					"text": "Sélectionner un bon cru sur leur carte des vins, puis le déguster en admirant les lieux.",
+					"destination": "cafe-vin"
+				},
+				{
+					"text": "Commander une bière et s'intéresser à la discussion de la table voisine.",
+					"destination": "cafe-debat"
+				},
+				{
+					"text": "Se glisser jusqu'au piano pour en tirer quelques notes",
+					"destination": "cafe-piano"
+				}
+			],
+			"comment": "Hédoniste, révolution"
 		},
 		"palace": {
 			"comment": "Hédoniste, riche, vampire"
 		},
 		"monuments": {
-			"text": "L'agitation habituelle de la ville laisse place à une ambiance feutrée où seuls tes pas résonnent entre les murs de pierre en cette heure avancée.",
+			"text": "Tandis que tu marches sur les pavés des quartiers historiques, l'agitation habituelle de la ville laisse place à un calme silence où seuls tes pas résonnent entre les murs de pierre en cette heure avancée. Ici, les architectures éclectiques témoignent solennellement des différentes strates d'Histoire sur lesquelles s'est construit ce petite morceau de civilisation, s'offrant au regard et à l'exploration.",
 			"choices": [
 				{
-					"text": "Une ancienne église",
+					"text": "Franchir le portail d'une vieille église.",
 					"destination": "eglise"
 				},
 				{
 					"text": "Musée / Museum ?"
 				},
 				{
-					"text": "Un hôtel particulier devenu restaurant de luxe",
+					"text": "Entrer en un hôtel particulier devenu restaurant de luxe",
 					"destination": "palace"
 				}
 			],
@@ -85,6 +113,7 @@
 			"text": "Ici, un autre visage de la ville se dessinait en clair-obscur.",
 			"choices": [
 				{
+					"text": "Se mêler à la foule",
 					"destination": "populace"
 				},
 				{
@@ -102,11 +131,26 @@
 				},
 				{
 					"destination": "groupe"
+				},
+				{
+					"destination": "cybercafe"
 				}
 			]
 		},
 		"solitude": {
-			"comment": "Fugitif, meurtrier, fantôme"
+			"choices": [
+				{
+					"text": "Franchir le portail d'une vieille église.",
+					"destination": "eglise"
+				},
+				{
+					"destination": "mendiant"
+				},
+				{
+					"destination": "agression"
+				}
+			],
+			"comment": "Fugitif, meurtrier, fantôme, justicier"
 		}
 	}
 }
