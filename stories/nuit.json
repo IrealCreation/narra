@@ -63,7 +63,7 @@
 			]
 		},
 		"discotheque": {
-			"comment": "Hédoniste, vampire, sexe, meurtrier"
+			"comment": "Hédoniste, vampire, sexe, meurtrier, MC"
 		},
 		"cafe": {
 			"text": [
@@ -100,14 +100,22 @@
 			],
 		},
 		"cafe-debat": {
-			"text": "",
+			"text": "Principal enjeu de société.",
 			"choices": [
 				{
-					"text": "",
+					"text": "La résistance à l'opression !",
 					"destination": ""
 				},
 				{
-					"text": "",
+					"text": "La lutte contre l'injustice !",
+					"destination": ""
+				},
+				{
+					"text": "Le combat contre l'insécurité !",
+					"destination": ""
+				},
+				{
+					"text": "Whatever bro.",
 					"destination": ""
 				}
 			],
