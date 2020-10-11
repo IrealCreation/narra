@@ -49,7 +49,7 @@
 			"text": "Les trottoires des rues les plus huppées sont éclairés d'enseignes chatoyantes, néons et LED clignotantes, portant sur la vie nocturne une lumière qui ne dort jamais. Sous cet éclat artificiel se presse une foule parée de ses atours les plus chatoyants ou les plus aguicheurs : robes en sequins, chemises entrouvertes, jambes de nylon, montres rutilantes... Une éternelle jeunesse désireuse de croquer les fruits de la nuit promis derrière des portes bien défendues.",
 			"choices": [
 				{
-					"text": "Se laisser guider par la foule et la musique jusqu'à une discothèque branchée.",
+					"text": "Se laisser guider par la musique jusqu'à une discothèque branchée.",
 					"destination": "discotheque"
 				},
 				{
@@ -63,12 +63,72 @@
 			]
 		},
 		"discotheque": {
+			"text": [
+				"L'entrée de la boîte de nuit est semblable à une tanière : sombre, moite, grondante... Tu te faufiles entre d'indéfinissables silhouettes et suis la vibration sonore afin d'atteindre le coeur de ce sanctuaire nocturne."
+				"Tu y es accueilli par une assourdissante battement de basses, résonnant entre les murs jusqu'en ta cage thoracique. Nombreux sont ceux venus s'abandonner ici à la pulsation puissante de la musique, et tu aperçois, lorsqu'un éclat de projecteur vient briser la pénombre ambiante, la masse dansante des corps entassés sur le dancefloor. Celui-ci occupe la plus grande partie de la large salle dégagée, laissant simplement la place pour un comptoir de bar bondé et un discret escalier menant au carré VIP."
+			],
+			"choices": [
+				{
+					"text": "Rejoindre à son tour la piste de danse.",
+					"destination": "discotheque-danse"
+				},
+				{
+					"text": "Se frayer un chemin jusqu'au bar.",
+					"destination": "discotheque-bar"
+				},
+				{
+					"text": "Grimper les escaliers vers le carré VIP.",
+					"destination": "discotheque-vip"
+				}
+			],
 			"comment": "Hédoniste, vampire, sexe, meurtrier, MC"
+		},
+		"discotheque-danse": {
+			"text": "L'éclat fugace d'un regard entraperçu sous l'éclairage d'un stroboscope",
+			"choices": [
+				{
+					"text": "",
+					"destination": ""
+				},
+				{
+					"text": "",
+					"destination": ""
+				}
+			],
+			"comment": "Sexe, vampire, hédoniste"
+		},
+		"discotheque-bar": {
+			"text": "Il te faut quelque peu jouer des coudes avant d'accéder toi-même au comptoir, ",
+			"choices": [
+				{
+					"text": "",
+					"destination": ""
+				},
+				{
+					"text": "",
+					"destination": ""
+				}
+			],
+			"comment": "Sexe, MC, meurtrier (GHB ?)"
+		},
+		"discotheque-vip": {
+			"text": "Dédaignant l'amas humain occupant la piste de danse, tu le contournes ",
+			"choices": [
+				{
+					"text": "",
+					"destination": ""
+				},
+				{
+					"text": "",
+					"destination": ""
+				}
+			],
+			"comment": "Vampire, élite"
 		},
 		"cafe": {
 			"text": [
 				"A peine as-tu pénétré dans le café que tu es assailli de bruit de centaines de voix, de rires, de conversations. Nombreux ici sont ceux attablés, soient-ils des bandes d'amis appréciant insouciemment ce moment partagé ensemble ; des couples cherchant à s'apprivoise l'un-l'autre ; ou des quidams occupés à refaire le monde autour d'un verre...",
-				"Un serveur fort occupé te guide, entre deux commandes, jusqu'à l'une des rares tables encore inoccupée de l'établissement, où tu t'assois sous un mur occupé par une élégante fresque en verre peint, près d'un groupe entretenant un débat animée. Tu remarques non loin un piano droit, fermé et innocupé, sans doute utilisé lors de soirées jam. Le serveur glisse un menu sur la table puis s'éloigne pour continuer sa besogne."
+				"Un serveur fort occupé te guide, entre deux commandes, jusqu'à l'une des rares tables encore inoccupée de l'établissement, où tu t'assois sous un mur occupé par une élégante fresque en verre peint, près d'un groupe entretenant un débat animée. Tu remarques non loin un piano droit, fermé et innocupé, sans doute utilisé lors de soirées d'improvisation musicale. Le serveur glisse un menu sur la table puis s'éloigne pour retourner à sa besogne."
 			],
 			"choices": [
 				{
@@ -97,7 +157,7 @@
 					"text": "",
 					"destination": ""
 				}
-			],
+			]
 		},
 		"cafe-debat": {
 			"text": "Principal enjeu de société.",
@@ -118,7 +178,7 @@
 					"text": "Whatever bro.",
 					"destination": ""
 				}
-			],
+			]
 		},
 		"cafe-piano": {
 			"text": "",
@@ -131,7 +191,7 @@
 					"text": "",
 					"destination": ""
 				}
-			],
+			]
 		},
 		"palace": {
 			"comment": "Hédoniste, riche, vampire"
@@ -181,6 +241,9 @@
 				},
 				{
 					"destination": "cybercafe"
+				},
+				{
+					"destination": "metal"
 				}
 			]
 		},
