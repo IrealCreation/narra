@@ -65,7 +65,7 @@
 		"discotheque": {
 			"text": [
 				"L'entrée de la boîte de nuit est semblable à une tanière : sombre, moite, grondante... Tu te faufiles entre d'indéfinissables silhouettes et suis la vibration sonore afin d'atteindre le coeur de ce sanctuaire nocturne.",
-				"Tu y es accueilli par une assourdissante battement de basses, résonnant entre les murs jusqu'en ta cage thoracique. Nombreux sont ceux venus s'abandonner ici à la pulsation puissante de la musique, et tu aperçois, lorsqu'un éclat de projecteur vient briser la pénombre ambiante, la masse dansante des corps entassés sur le dancefloor. Celui-ci occupe la plus grande partie de la large salle dégagée, laissant simplement la place pour un comptoir de bar bondé et un discret escalier menant au carré VIP."
+				"Tu y es accueilli par une assourdissante battement de basses, résonnant entre les murs jusqu'en ta cage thoracique. Nombreux sont ceux venus s'abandonner ici à la pulsation puissante de la musique, et tu aperçois, lorsqu'un éclat de projecteur vient briser la pénombre ambiante, la masse dansante des corps entassés sur le dancefloor. Celui-ci occupe la plus grande partie de la large salle dégagée, laissant simplement la place pour un comptoir de bar bondé et un discret escalier menant à ce qui doit être le carré VIP."
 			],
 			"choices": [
 				{
@@ -112,7 +112,7 @@
 			"comment": "Sexe, MC, meurtrier (GHB ?)"
 		},
 		"discotheque-vip": {
-			"text": "Dédaignant l'amas humain occupant la piste de danse, tu le contournes ",
+			"text": "Dédaignant l'amas humain occupant ce lieu bondé, tu le contournes ",
 			"choices": [
 				{
 					"text": "",
@@ -132,7 +132,7 @@
 			],
 			"choices": [
 				{
-					"text": "Sélectionner un bon cru sur leur carte des vins, puis le déguster en admirant les lieux.",
+					"text": "Sélectionner un bon cru sur leur carte des vins, à déguster en admirant les lieux.",
 					"destination": "cafe-vin"
 				},
 				{
@@ -140,14 +140,14 @@
 					"destination": "cafe-debat"
 				},
 				{
-					"text": "Se glisser jusqu'au piano pour en tirer quelques notes",
+					"text": "Se glisser jusqu'au piano pour en tirer quelques notes.",
 					"destination": "cafe-piano"
 				}
 			],
 			"comment": "Hédoniste, révolution"
 		},
 		"cafe-vin": {
-			"text": "",
+			"text": "Un verre millésimé soigneusement choisi à la main, tu laisses ton regard couler sur la décoration de l'endroit. Les tables, luminaires et fresques de style art-déco laissent transparaître ",
 			"choices": [
 				{
 					"text": "",
@@ -157,7 +157,8 @@
 					"text": "",
 					"destination": ""
 				}
-			]
+			],
+			"comment": "Hédoniste, élite"
 		},
 		"cafe-debat": {
 			"text": "Principal enjeu de société.",
