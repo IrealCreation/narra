@@ -147,7 +147,7 @@
 			"comment": "Hédoniste, révolution"
 		},
 		"cafe-vin": {
-			"text": "Un verre millésimé soigneusement choisi à la main, tu laisses ton regard couler sur la décoration de l'endroit. Les tables, luminaires et fresques de style art-déco laissent transparaître ",
+			"text": "Un verre millésimé soigneusement choisi à la main, tu laisses ton regard couler sur la décoration de l'endroit. Les tables, luminaires et fresques laissent transparaître une inspiration Art Nouveau évoquant le début du XXe siècle, avec de délicates dorures métalliques en arabesque ou une reproduction sur verre d'une peinture de Mucha...",
 			"choices": [
 				{
 					"text": "",
@@ -168,11 +168,11 @@
 					"destination": ""
 				},
 				{
-					"text": "La lutte contre l'injustice !",
+					"text": "Le combat face à l'injustice !",
 					"destination": ""
 				},
 				{
-					"text": "Le combat contre l'insécurité !",
+					"text": "La lutte contre l'insécurité !",
 					"destination": ""
 				},
 				{
