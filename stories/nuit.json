@@ -46,7 +46,7 @@
 			]
 		},
 		"mondain": {
-			"text": "Les trottoires des rues les plus huppées sont éclairés d'enseignes chatoyantes, néons et LED clignotantes, portant sur la vie nocturne une lumière qui ne dort jamais. Sous cet éclat artificiel se presse une foule parée de ses atours les plus chatoyants ou les plus aguicheurs : robes en sequins, chemises entrouvertes, jambes de nylon, montres rutilantes... Une éternelle jeunesse désireuse de croquer les fruits de la nuit promis derrière des portes bien défendues.",
+			"text": "Les trottoires des rues les plus huppées sont éclairés d'enseignes chatoyantes, néons et LED clignotantes, portant sur la vie nocturne une lumière qui ne dort jamais. Sous cet éclat artificiel se presse une foule parée de ses atours les plus élégants ou les plus aguicheurs : robes en sequins, chemises entrouvertes, jambes de nylon, montres rutilantes... Une éternelle jeunesse désireuse de croquer les fruits de la nuit promis derrière des portes bien défendues.",
 			"choices": [
 				{
 					"text": "Se laisser guider par la musique jusqu'à une discothèque branchée.",
@@ -65,7 +65,7 @@
 		"discotheque": {
 			"text": [
 				"L'entrée de la boîte de nuit est semblable à une tanière : sombre, moite, grondante... Tu te faufiles entre d'indéfinissables silhouettes et suis la vibration sonore afin d'atteindre le coeur de ce sanctuaire nocturne.",
-				"Tu y es accueilli par une assourdissante battement de basses, résonnant entre les murs jusqu'en ta cage thoracique. Nombreux sont ceux venus s'abandonner ici à la pulsation puissante de la musique, et tu aperçois, lorsqu'un éclat de projecteur vient briser la pénombre ambiante, la masse dansante des corps entassés sur le dancefloor. Celui-ci occupe la plus grande partie de la large salle dégagée, laissant simplement la place pour un comptoir de bar bondé et un discret escalier menant à ce qui doit être le carré VIP."
+				"Tu y es accueilli par un assourdissant battement de basses, résonnant entre les murs jusqu'en ta cage thoracique. Nombreux sont ceux venus s'abandonner ici à la pulsation puissante de la musique, et tu aperçois, lorsqu'un éclat de projecteur vient briser la pénombre ambiante, la masse dansante des corps entassés sur le dancefloor. Celui-ci occupe la plus grande partie de la large salle dégagée, laissant simplement la place pour un comptoir de bar bondé et un discret escalier menant à ce qui doit être le carré VIP."
 			],
 			"choices": [
 				{
@@ -127,7 +127,7 @@
 		},
 		"cafe": {
 			"text": [
-				"A peine as-tu pénétré dans le café que tu es assailli de bruit de centaines de voix, de rires, de conversations. Nombreux ici sont ceux attablés, soient-ils des bandes d'amis appréciant insouciemment ce moment partagé ensemble ; des couples cherchant à s'apprivoise l'un-l'autre ; ou des quidams occupés à refaire le monde autour d'un verre...",
+				"A peine as-tu pénétré dans le café que tu es assailli de bruit de centaines de voix, de rires, de conversations. Nombreux sont ceux ici attablés, soient-ils des bandes d'amis appréciant insouciemment ce moment partagé ensemble ; des couples cherchant à s'apprivoise l'un-l'autre ; ou des quidams occupés à refaire le monde autour d'un verre...",
 				"Un serveur fort occupé te guide, entre deux commandes, jusqu'à l'une des rares tables encore inoccupée de l'établissement, où tu t'assois sous un mur occupé par une élégante fresque en verre peint, près d'un groupe entretenant un débat animée. Tu remarques non loin un piano droit, fermé et innocupé, sans doute utilisé lors de soirées d'improvisation musicale. Le serveur glisse un menu sur la table puis s'éloigne pour retourner à sa besogne."
 			],
 			"choices": [
